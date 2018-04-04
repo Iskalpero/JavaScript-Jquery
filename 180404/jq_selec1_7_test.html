@@ -1,0 +1,69 @@
+<!doctype html>
+
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>selec1_7_test</title>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" ></script>
+		<script>
+			/*
+			$(function(){
+				$("#list_1").parent() // 밑에서 리스트 1-1의 부모인 ul에 적용되어진다.
+					.css("border","2px dashed #F00");
+			});
+			<!-- jq_selec1_7_test 문-->
+			*/
+			
+			$(function(){
+				//$("#wrap h1") // id가 warp이 포함되는 모든 <h1>요소에 해당
+				//	.css({
+				//		"background-color":"yellow",
+				//		"border":"2px dashed #F00"
+				//	});
+					
+				$("#wrap h1")
+					.css("background-color","yellow")
+					.css("border","2px dashed #F00");
+				// 작성할 때 위의 주석처리한 형식 or 밑의 방식으로 하면 된다.
+				
+			});
+			<!-- jq_selec1_8_test 문-->
+		</script>
+	</head>
+	
+	
+	
+	<body>
+		<script>
+			/*
+			<h1> 인접 관계 선택자 </h1>
+			
+			<ul id="wrap">
+				<li>리스트1
+					<ul>
+						<li id="list_1">리스트1-1</li>
+						<li>리스트1-2</li>
+					</ul>
+				</li>
+				<li>리스트2</li>
+				<li>리스트3</li>
+			</ul> //jq_selec1_7_test 문
+			*/
+		</script>
+		
+			<div id="wrap">
+				<h1> 인접 관계 선택자 </h1>
+				<p> 내용1 </p>
+				<section>
+					<h1> 하위 요소 선택자 </h1>
+					<p> 내용2 </p2>
+				</section>
+			</div>
+			<!-- jq_selec1_8_test 문-->
+		
+		
+	</body>
+
+</html>

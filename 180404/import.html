@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Import</title>
+		<script src="example.js">
+			document.write("넘어가는거 확인2 ");
+			//src로 import를 할 경우에는 script안의 기능이 작동하지 않는다.
+			// import우선순위로 둔다.
+		</script>
+		<script>
+			document.write("넘어가는거 확인2");
+			//밑에 input에서 document를 평상시처럼 쓰면 ""가 중복된다.
+			// 따라서 ''를 사용해야한다.
+		</script>
+
+	</head>
+	</head>
+	
+	<body>
+		<form>
+			<input type="button" value="실행" onclick="document.write('클릭이벤트');">
+			
+		</form>	
+	</body>
+
+</html>

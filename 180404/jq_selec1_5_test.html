@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>selec_1_5_test</title>
+		<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+		<script>
+			$(function(){
+				$("#tit3,h1") // 이것처럼 한 번에 여러개의 요소를 선택할 수 있다.
+				// <h1>과 id가 tit3인것에 대한 css스타일
+					.css("background-color","#0FF")
+					.css("border","2px dashed #F00");
+					});
+		</script>
+	</head>
+	
+	<body>
+		<h1> JQuery </h1>
+		<h2> Choice </h2>
+		<h3 id="tit3"> Power </h3>
+		<h3> Over Whelming </h4>
+	</body>
+	
+</html>
