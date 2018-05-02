@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<title> JQ </title>
+		<scripta src = "../js/jquery-3.3.1.js"></scripta>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script>
+			$(function(){
+				
+				$("#wrap > h1")
+					.css("border","2px dashed #f00");
+				
+				/*
+				$("#wrap > section").children()
+					.css({
+						"background-color":"red",
+						"border":"2px dotted #000"
+					
+					});
+				*/
+				$("#wrap > section").children()
+					.css("background-color","red")
+					.css("border","2px dotted #000");
+				
+			});
+		</script>
+	
+	</head>
+	
+	
+	<body>
+		
+		<div id="wrap">
+			
+			<h1> 인접 관계 선택자 </h1>
+			<p> 내 용 </p>
+			<section>
+				<h1> 자식 요소 선택자 </h1>
+				<p> 내용 2 </p>
+			</section>		
+		</div>
+		
+	</body>
+
+
+</html>

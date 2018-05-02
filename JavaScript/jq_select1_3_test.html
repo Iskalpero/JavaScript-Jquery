@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<title>JQSel1_3_test</title>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		</script>
+		<script>
+			$(function(){
+				$(".tit").css("background-color","#FF0")
+						 .css("border", "1px dotted #F00");
+						 });
+			// css형식은 (속성,대상속성값)이다.
+			// 하지만 속성을 여러개 해야 할 때가 있는데 이럴 경우에는 위처럼
+			// css를 연속으로 사용한 다음 마지막 속성을 넣어준 후에 ;으로 끝을 내준다
+			// 이걸 체이닝 기법이라고 한다.
+		</script>
+	</head>
+	
+	
+	<body>
+		
+		<h1> JQuery </h1>
+		<h2 class="tit"> 선택지 </h2>
+		<h3> Choice </h3>	
+	</body>
+	
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 배열2 </title>
+	</head>
+
+	<body>
+		<script>
+			
+			var arr_1 = ["사당","교대","방배","강남"];
+			var arr_2 = ["탁탁","압구정","옥수"];
+			
+			//var result = arr_1.join("-");
+			//join의 경우 안의 문자로 배열의 값들을 이어서 표현해준다.
+			//console.log(result);
+			//Chrome의 경우 F12를 누른다음 상단에 Console를 선택하면 위의 Console.log의 내용이 뜬다.
+			
+			//result = arr_1.concat(arr_2);
+			//console.log(result);
+			// concat은 두 배열을 하나로 이어서 출력시켜준다.
+			
+			console.log(arr_1);
+			result = arr_1.slice(1,3);
+			console.log(result);
+			// slice는 해당 번째 배열을 제외하고 출력시켜준다.
+			// 2개를 입력할 경우 첫 숫자 <= 출력 < 두 번째 숫자
+			// 면 2,3번째 값이 나온다.
+			
+			//console.log(arr_1);
+			//arr_1.sort();
+			//console.log(arr_1);
+			
+			//sort,reverse는 오름차순, 역순으로 각각 정렬시켜주는데
+			// sort의 정렬기준은 ASCII 코드 기준으로 정렬시킨다.
+			// reverse는 그냥 이전에 정렬된 순서를 거꾸로 해주는것 뿐이다.
+			
+			//console.log(arr_2);
+			//arr_2.reverse();
+			//console.log(arr_2);
+		</script>
+	</body>
+</html>

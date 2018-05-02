@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> String </title>
+	</head>
+
+	<body>
+		<script>
+			
+			var t = "Hello Thank you good luck to you";
+			
+			//document.write(t.charAt(16),"<br />");
+			//charAt은 대상 문자의 n번쨰 인덱스의 값을 불러온다.
+			// 띄워쓰는것도 카운트된다.
+			// <br />는 구버젼에서 호환성을 위해 쓰는 것으로
+			// <br>만 써도 되니 인지만 하고 있자.
+			//document.write(t.indexOf("you"),"<br>");
+			// indexof는 왼쪽에서 해당 단어가 몇 번째에서 시작되는지 
+			// 해당 인덱스를 출력시켜준다.
+			// 해당 단어가 존재하지 않을 경우 -1을 리턴시킨다.
+			//document.write(t.indexOf("you",16),"<br>");
+			// indexof에서 단어 뒤에 숫자를 넣으면 해당 숫자 이후의 인덱스부터
+			// indexof가 돌아간다.
+			
+			//document.write(t.lastIndexOf("you"),"<br>");
+			//document.write(t.lastIndexOf("you",25),"<br>");
+			// indexof는 왼쪽-> 오른쪽, lastIndexOf는 오른쪽->왼쪽 대소문자 유의
+			
+			//document.write(t.match("luck"),"<br>");
+			// 있으면 입력한 문자 출력, 없으면 null 출력
+			//document.write(t.search("you"),"<br>");
+			// indexOf와 기능 똑같음
+			
+			//document.write(t.substr(21,4),"<br>");
+			// substr은 몇 번째 인덱스부터 몇 글자를 가져와서 출력시켜줌.
+			
+			document.write(t.substring(6,12),"<br>");
+			//substring은 첫번째 입력 번째 인덱스 ~ 두 번째 입력한 인덱스까지 값 가져와서 출력.
+			// 예제는 6<=가져올문자<12 이다.
+			
+			// toLowerCase() 대문자->소문자로 바뀐 값들을 출력, toUpperCase()는 toLowerCase()의 반대
+			// length는 길이
+			
+			//replace는 첫 번째 문자를 두 번째 문자로 처음 발견한 것만 바꿔준다.
+			//ex ) t.replace("you","me"),"<br>");
+			
+			var s = t.split(" ");
+			//split는 안의 문자를 기준으로 배열형태로 분리해 저장시켜 준다.
+			//여기서 s는 s[0] : Hello , s[1]: Thank , s[2]: you .. 이렇게 된다.
+			
+			var Str = "A";
+			
+			
+			
+		</script>
+	</body>
+</html>

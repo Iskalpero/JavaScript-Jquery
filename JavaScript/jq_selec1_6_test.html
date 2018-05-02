@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>selec_1_6_test</title>
+		<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+		<script>
+			$(function(){
+				$("h1.tit") // h1태그의 tit 클래스에 적용되는 css들
+					.css("background-color","#0FF")
+					.css("border","2px dashed #F00");
+			});
+			
+			//밑의 h3는 클래스명은 일치하나 h1태그가 아니므로 스크립트 작동 x
+		</script>
+	</head>
+	
+	<body>
+		<h1 class="tit"> JQuery </h1>
+		<h2>choice</h2>
+		<h3 class="tit"> Select </h3>
+		
+	</body>
+	
+</html>

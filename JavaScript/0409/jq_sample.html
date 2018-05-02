@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<title> JQ </title>
+		<scripta src = "../js/jquery-3.3.1.js"></scripta>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script>
+			// 탭창에 아이콘 출력
+			// html5로
+			// <link ref="shortcut iocn" type="image/x-icon" href=아이콘 경로 >
+			/*
+			$(document).ready(function(){
+				$("#title")
+					.css("color","red")
+					.css("text-align","center")
+					.css("border","1px dashed #000");
+					
+				$(".title").css("color","aqua");
+				
+				$("h2").css("color","gray");
+			});
+			*/
+			
+			$(function(){
+				$("#main h1").css("border","2px dashed #000");
+			
+			});
+			
+		</script>
+	
+	</head>
+	
+	
+	<body>
+		<div id = "main">
+			<h1 id = "title">제목</h1>
+			<h1 class = "title"> 정직하다</h1>
+			<h2> GAZUAAAA </h2>
+			<p> 확인 </p>
+		</div>
+	</body>
+
+
+</html>

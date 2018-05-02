@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 윈도우 팝업 </title>
+			<script>
+			//function nw(){
+			//	window.open("http://sports.news.naver.com/","스포츠","width=800, height=640, scrollbars=no");
+			//}
+			// 팝업으로 새창 열리게 함.
+			var i = 0;
+			//var auto_1 = setInterval(function(){
+			var auto_1 = setTimeout(function(){
+				i++;
+				window.alert(i);
+				},2000);
+			// 실제는 window.setInterval(function(){i++;}.3000); 인데, window를 생략한 것이다.
+			// function(){i++;} 을 줄여서 "i++"으로 나타낼 수도 있다.		
+			// html 버튼으로 이를 정지하기위해선 onclick설정에서 clearInterval(변수명) 을 입력하면 된드아
+			// 
+		</script>
+	</head>
+
+	<body>
+		<form>
+			<input type ="button" value="정지" onclick="clearInterval(auto_1);">
+			
+		</form>
+	</body>
+</html>

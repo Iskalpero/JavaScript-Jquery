@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function( ) {
+	$(".btn1").click(function(){
+	//class = btn1인 걸 클릭 할 시에
+		$(".btn1").parent().next()
+		.css("color","#f00");
+	// 대상 버튼의 부모인 p다음의 p의 내용인 내용1의 색깔을 바꿔준다.
+	});
+	
+	//한 가지만 이벤트를 하기 위한 목적이라면  .click(function(){})형식을 사용하고.
+	//그 이상의 이벤트를 하기 위한 목적이라면  .on({ 이벤트1:function(){} 이벤트2:function(){} ...})
+	//형식으로 사용하면 된다.
+	
+	$(".btn2").on({
+	// on은 그룹이벤트 등록 형식이다.
+		"mouseover focus": function() {
+		// 말그대로 마우스를 갖다대면(html의 hower)
+		// 색상변화.
+			$(".btn2").parent().next()
+			.css({"color":"#0f0"});
+		},
+		 "mouseout blur": function() {
+		 // 마우스를 버튼에서 벗어나면
+		 // 색상이 원래대로 돌아온다. , leave를 써도 되고 blur를 써도 된다.
+			$(".btn2").parent().next()
+			.css({"color":"#000"});
+			
+		},
+		
+		"dblclick": function(){
+			$(".btn1").hide();
+		}
+	
+	});   
+});
+</script>
+</head>
+<body>
+	<p>
+	<button class="btn1">버튼1</button>
+	</p>
+	<p>내용1</p>
+	<p>
+		<button class="btn2">버튼2</button>
+	</p>
+	<p>내용2</p>
+</body>
+</html>

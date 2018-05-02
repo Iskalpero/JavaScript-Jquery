@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 함수 2</title>
+		<script>
+			var rightId = "korea";
+			var rightPw = "1234";
+			var parameter="";
+			
+
+			function login(){
+				//alert(arguments.length + "\n" + arguments[0] +"\n" + arguments[1]);
+				
+				for(k=0; k<arguments.length; k++)
+					parameter += arguments[k] +"\n";
+				
+				//arguments 는 값을 받아올 수 있는 명령문이다.
+				//
+				alert(arguments.length +"\n" +  parameter);
+				if(arguments[0]==rightId){
+					
+					if(arguments[1]==rightPw)
+						document.write(arguments[0] + "접속 완료","<br>");
+					else
+						alert("잘못된 비밀번호");
+					
+					
+				}
+				else
+					alert("아이디가 틀립니다.");
+			}
+			
+			//var userId = prompt("아이디를 입력하세요.","");
+			//var userPw = prompt("비밀번호를 입력하세요.","");
+			//login(userId,userPw);
+			login("korea","1234",30);
+		</script>
+	</head>
+
+	<body id = "theBody">
+		
+	</body>
+
+
+</html>

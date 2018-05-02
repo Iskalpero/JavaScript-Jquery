@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 배열3 </title>
+	</head>
+
+	<body>
+		<script>
+			
+			var greenArr = ["교대","방배","강남"];
+			var yellowArr = ["미금","정자","수서"];
+			
+			//greenArr.splice(1,2,"서초","역삼");
+			//console.log(greenArr);
+			// splice는 첫번째 입력 : 대상 인덱스
+			// 			두번째 입력 : 삭제할 데이터의 개수(ex. 삭제할 요소가 1개인데 2를 입력하면
+			//													1을 입력한 것과 동일하다.
+			//			세번째 ~ : 입력할 데이터값
+			
+			var data1 = yellowArr.pop();
+			// pop은 stack의 개념처럼 맨 마지막에 들어간 값을 꺼집어 내서 출력하는것이다.
+			// stack과 같이 꺼내서 쓰는 것이므로 예제처럼 yellowArr에 있던 '수서'라는 값은
+			// 없어진다.
+			console.log(yellowArr);
+			console.log(data1);
+			
+			//var data2 = yellowArr.shift();
+			//console.log(data2);
+			//console.log(yellowArr)
+			// shift는 이전의 pop이 맨 마지막에 들어간 값을 뺏다고 하면
+			// 이것은 맨 처음에 들어간 값을 빼서 출력시킨다.
+			
+			yellowArr.unshift(data1);
+			console.log(yellowArr);
+			//unshift는 shift가 빼내는 역할이라면, 맨 처음으로 대상값을 넣어준다.
+			
+		</script>
+	</body>
+</html>

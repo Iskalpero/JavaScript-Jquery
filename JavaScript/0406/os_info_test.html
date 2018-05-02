@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 윈도우 팝업 </title>
+		<script>
+			var info = navigator.userAgent.toLowerCase();
+			//var info = "win64 ko chrome...".toLowerCase();
+			// OS와 브라우저의 종합정보를 info변수에 담음
+			var osimg = null;
+			if(info.indexOf('windows')>=0)
+				osimg = "windows.png";
+			else if(info.indexOf('macintosh')>=0)
+				osimg = "macintosh.png";
+			else if(info.indexOf('iphone') >=0)
+				osimg = "iphone.png";
+			else if(info.indexOf('android') >= 0)
+				osimg = "Android.png";
+			
+			document.write("<img src=\"images/" + osimg + "\">","<br>");
+			
+			var scr = screen;
+			var sc_w = scr.width;
+			var sc_h = scr.height;
+			
+			document.write("해상도 너비 : " + sc_w ,  "<br>");
+			document.write("해상도 높이 : " + sc_h ,  "<br>");
+			
+			
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>

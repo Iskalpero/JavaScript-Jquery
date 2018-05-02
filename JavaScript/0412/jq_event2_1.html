@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title> 이벤트 </title>  
+		<script src="../js/jquery.js"></script>
+		<script>
+		$(function(){
+			$("#user_id_1, #user_pw_1").on("focus", 
+				function(){
+					$(this)
+						.css({"background-color":"pink"});
+				});
+			// 해당 태그 id에 클릭해 커서를 형성시킬 시에 색깔을 변화시켜준다.
+			$("#user_id_1, #user_pw_1").on("blur",
+				function(){
+					$(this)
+						.css({"background-color":"white"});
+				});
+			// 해당 태그 id의 커서를 사라지게 하면(다른곳 클릭) 색깔을 바꿔준다.
+			$("#frm_2").on("focusin",
+				function(){
+					$(this)
+						.css({"background-color":"pink"});
+				});
+			// #frm_2의 하위요소인 user_id_2, user_pw_2를 클릭 시에 
+			// #frm_2의 배경색상을 변경시켜준다.
+			$("#frm_2").on("focusout",
+				function(){
+					$(this)
+						.css({"background-color":"#fff"});
+				});
+			// #frm_2의 하위요소인 user_id_2, user_pw_2를 클릭 해제시에(다른 곳 클릭) 
+			// #frm_2의 배경색상을 변경시켜준다.
+		});
+		
+		
+		//html시간에 배웠지만, form에서 값을 보낼 때 태그에서 name명의 변수이름으로 값이 전송된다.
+		
+		</script>
+	</head>
+	<body>
+		<h1>focus / blur</h1>
+		<form action="#">
+			<p>
+				<label for="user_id_1">ID</label>
+				<input type="text" 
+				name="user_id_1" id="user_id_1">
+			</p>
+			<p>
+				<label for="user_pw_1">PW</label>
+				<input type="password" 
+				name="user_pw_1" id="user_pw_1">
+			</p>
+		</form>
+		<h1>focusin / focusout</h1>
+		<form action="#" id="frm_2">
+			<p>
+				<label for="user_id_2">ID</label>
+				<input type="text" 
+				name="user_id_2" id="user_id_2">
+			</p>
+			<p>
+				<label for="user_pw_2">PW</label>
+				<input type="password" 
+				name="user_pw_2" id="user_pw_2">
+			</p>
+		</form>
+	</body>
+
+</html>

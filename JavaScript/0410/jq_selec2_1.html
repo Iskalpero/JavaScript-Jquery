@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<title> JQ </title>
+		<scripta src = "../js/jquery-3.3.1.js"></scripta>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script>
+			//css를 표현하는 3번째 방법
+			// var 스타일함수 = { "속성명":"속성값" };
+			// 으로 해서 함수를 쓰면된다. 
+			var style_1 = {"background-color":"red"};
+			$(document).ready(function(){
+				$("#menu li:even")
+					.css("background-color","green");
+				
+				$("#menu li:odd")
+					.css({
+						"background-color":"black"
+					});	
+				
+				
+				$("#menu li:first")
+					.css(style_1);
+					
+			
+				//순서는 마지막 우선.
+				
+				$("#menu li:last")
+						.css("background-color","blue");				
+				
+				
+				
+			
+			});
+			
+			
+		</script>
+	
+	</head>
+	
+	
+	<body>
+		<h1>탐색 선택자</h1>
+		<ul id="menu">
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+			<li>내용4</li>
+		</ul>
+		
+	</body>
+
+
+</html>

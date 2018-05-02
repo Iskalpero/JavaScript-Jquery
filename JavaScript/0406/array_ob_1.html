@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 배열 </title>
+	</head>
+
+	<body>
+		<script>
+			
+			var arr = [30, "탁", true];
+			//배열 선언할때 case 1. []괄호에 유의하자.
+			
+			//var arr = new Array(30, "탁", true);
+					
+			//var arr = new Array();
+			//arr[0] = 30; arr[1] = "탁"; arr[2] = true;
+			// 이 두가지는 자바에서도 사용되는 유형이다.
+			
+			document.write("<h3>탁탁 </h3>");
+			
+			//var len = arr.length;
+			//for(var i = 0; i<len; i++){
+			//	document.write(arr[i],"<br>");
+			//}  // 일반적으로 len변수로 arr배열의 길이값을 저장해 출력.
+			
+			
+			for(var i in arr)
+				document.write(arr[i],"<br>");
+			// 위를 더 간략하게 나타내면
+			// in이란 명령어를 사용하면 된다.
+		</script>
+	</body>
+</html>

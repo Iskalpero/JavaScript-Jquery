@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>함수 10 </title>
+		<script>
+			function CheckWeight(name, height, weight){
+				this.userName = name;
+				this.userHeight = height;
+				this.userWeight = weight;
+				// 생성자 정의
+				// 프로토타입 추가
+				this.minWeight;
+				this.maxWeight;
+				
+				
+				//this.getInfo = function(){ // 각자 객체
+				//프로토타입
+				CheckWeight.prototype.getInfo = function(){
+					var str = "";
+					str += "이름 : " + this.userName + ", ";
+					str += "키 : " + this.userHeight + ", ";
+					str += "몸무게 : " + this.userWeight + "<br>";
+					return str;
+					//출력
+				}
+			
+				//this.getResult = function(){ //개별 객체
+				CheckWeight.prototype.getResult = function(){
+					this.minWeight = (this.userHeight - 100 ) * 0.9 - 5;
+					this.maxWeight = (this.userHeight - 100 ) * 0.9 + 5;
+															
+					if(this.userWeight >= this.minWeight
+						&& this.userWeight <= this.maxWeight)
+						return "정상 몸무게";
+					else if(this.userWeight < this.minWeight)
+						return "정상 몸무게보다 미달입니다.";
+					else
+						return "정상 몸무게보다 초과";
+						
+				
+				}
+			
+			}
+			
+			var a = new CheckWeight("ABC", 168, 62);
+			var b = new CheckWeight("DEF", 150, 30);
+			
+			console.log(a);
+			console.log(b);
+			
+			
+			
+			
+			document.write(encodeURI("?query=대한민국"),"<br>");
+			document.write(decodeURI("?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD"),"<br>");
+			
+			document.write(encodeURIComponent("?query=대한민국"),"<br>");
+			document.write(decodeURIComponent("?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD"),"<br>");
+			//여기서 나오는 %3 = ?를 의미, %3D = '=' 을 의미한다.
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+
+
+</html>

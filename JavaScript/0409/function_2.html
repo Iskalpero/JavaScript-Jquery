@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title> 함수 2</title>
+		<script>
+			var color = [ "white", "black", "aqua", "blue"];
+			
+			var i = 0;
+			
+			function changeColor(){
+			
+				i++;
+				if(i>=color.length){
+					i=0;
+				}
+			// 
+			
+			
+			var bodyTag = document.getElementById("theBody");
+			//getElementById 철자에 주의하자.
+			// 밑의 html태그의 theBody 라는 Id를 bodyTag의 값으로 설정한다.
+			//getElementById('abc')는 아이디가 'abc'인 HTML 요소를 갖고 와라
+			bodyTag.style.backgroundColor = color[i];
+			// 색깔을 바꿔줌.
+		
+			}
+			//버튼을 누를때마다 이가 실행된다. 
+		</script>
+	</head>
+
+	<body id = "theBody">
+		<button onclick="changeColor();"> 바꾸기 </button>
+	</body>
+
+
+</html>

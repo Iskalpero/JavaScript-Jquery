@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+		<title> JQ </title>
+		<scripta src = "../js/jquery-3.3.1.js"></scripta>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script>
+			var style = { "background-color":"#0FF" };
+			$(function(){
+				
+				$("#menu1 li:nth-child(1)")
+					.css("background-color","#FF0");
+				
+				$("#menu1 li:nth-child(2n)")
+				//등차수열은 되나 등비수열은 안된다
+				//n^2이런건 안된다는것
+				
+					.css({
+						"border":"2px dashed #f00"
+					});
+				
+				$("#menu2 li:nth-last-child(2)")
+					.css(style);
+						
+			
+			});
+			
+		</script>
+	
+	</head>
+	
+	
+	<body>
+		<h1> 탐색 선택자 </h1>
+		
+		<ul id="menu1">
+			<li>내용 1-1 </li>
+			<li>내용 1-2 </li>
+			<li>내용 1-3 </li>
+			<li>내용 1-4 </li>
+		</ul>
+		
+		<ul id="menu2">
+			<li>내용 2-1 </li>
+			<li>내용 2-2 </li>
+			<li>내용 2-3 </li>
+			<li>내용 2-4 </li>
+		</ul>
+		
+		
+	</body>
+
+
+</html>

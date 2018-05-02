@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Import</title>
+	</head>
+	</head>
+	
+	<body>
+		<script>
+			var a = true;
+			var b = false;
+			var c = 10>5;
+			var d = Boolean(null); // false의 4가지 경우 -> "", null, undefined, 0
+			document.write( a,"<br>",b,"<br>",c,"<br>",d,"<br>");
+			var e = "500";
+			var f = Number("500");
+			document.write(e + 100 + "<br>"); //문자열 + 숫자의 경우이므로 둘을 각각 출력 시킨다.
+			document.write(f + 100 + "<br>"); //Number가 문자를 숫자로 바꿔줘서 정상적 연산결과가 나온다.
+		</script>
+	</body>
+
+</html>
